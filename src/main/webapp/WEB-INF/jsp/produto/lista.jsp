@@ -12,9 +12,12 @@
   	<title>Lista Produtos</title>
 </head>
 <body>
+	<h1>${usuariologado.usuario.login}</h1>
 	<c:forEach items="${produtoList }" var="produto">
 		Nome: ${produto.nome}
 		Preço: ${produto.preco }<br>
 	</c:forEach>
+	
+	<a href="<c:url value="/produto/adicionar"/>">voltar</a>
 </body>
 </html>

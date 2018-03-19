@@ -9,19 +9,20 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   	<meta name="description" content="">
   	<meta name="author" content="">
-  	<title>Adicionar Produto</title>
+  	<title>Adicionar Usuario</title>
 </head>
 <body>
 	<c:if test="${mensagem != null}">
 		${mensagem}
-		
-		${prod.nome}
 	</c:if>
-	pagina de cadastro
-	<form action="<c:url value="/produto/adicionar"/>" method="post">
-		Nome: <input type="text" name="produto.nome">
-		Preço: <input type="number" name="produto.preco">
-		<input type="Submit" value="Adicionar"> 
-	</form>
+	<form action="<c:url value="/usuario/adicionar"/>" method="post">
+
+ 		Nome: <input type="text" name="u.nome">
+ 		Login: <input type="text" name="u.login">
+ 		Senha: <input type="password" name="u.senha">
+ 		
+ 		<input type="submit" value="Cadastrar">
+ 
+ 	</form>
 </body>
 </html>
